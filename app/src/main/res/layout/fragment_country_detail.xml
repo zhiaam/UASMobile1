@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.countries.ui.CountryViewModel" />
+
+        <variable
+            name="photo"
+            type="com.example.countries.network.Country" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:padding="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:imageUrl="@{viewModel.country.flags.png}"
+                tools:src="@tools:sample/backgrounds/scenic"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/photo"
+                tools:text="@{viewModel.country.name.official}"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/dividerHorizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name"/>
+
+            <LinearLayout
+                android:id="@+id/namelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/name">
+                <TextView
+                    android:id="@+id/namecommonwhat"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:text="@string/text1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:text="Common name:"/>
+                <TextView
+                    android:id="@+id/namecommon"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/namecommonwhat"
+                    tools:text="@{viewModel.country.name.common}"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/capitallayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/namelayout">
+                <TextView
+                    android:id="@+id/capitalwhat"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:text="@string/text2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:text="Capital: "/>
+                <TextView
+                    android:id="@+id/capital"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/capitalwhat"
+                    tools:text="@{viewModel.country.capital[0]}"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reqionlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/capitallayout">
+                <TextView
+                    android:id="@+id/regionwhat"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:text="@string/text3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/capitallayout"
+                    tools:text="Region"/>
+                <TextView
+                    android:id="@+id/reqion"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/regionwhat"
+                    tools:text="@{viewModel.country.region}"/>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
