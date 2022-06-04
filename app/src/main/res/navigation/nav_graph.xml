@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/countryFrontFragment">
 
-        <fragment
+    <fragment
         android:id="@+id/countryListFragment"
         android:name="com.example.countries.ui.CountryListFragment"
         android:label="CountryListFragment" >
@@ -23,5 +24,21 @@
         <action
             android:id="@+id/action_countryFrontFragment_to_countryListFragment"
             app:destination="@id/countryListFragment" />
+        <action
+            android:id="@+id/action_countryFrontFragment_to_heritageListFragment"
+            app:destination="@id/heritageListFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/heritageListFragment"
+        android:name="com.example.countries.ui.HeritageListFragment"
+        android:label="fragment_heritage_list"
+        tools:layout="@layout/fragment_heritage_list" >
+        <action
+            android:id="@+id/action_heritageListFragment_to_heritageDetailFragment"
+            app:destination="@id/heritageDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/heritageDetailFragment"
+        android:name="com.example.countries.ui.HeritageDetailFragment"
+        android:label="HeritageDetailFragment" />
 </navigation>

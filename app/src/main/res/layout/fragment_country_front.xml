@@ -48,6 +48,16 @@
                 android:minWidth="@dimen/button_width"
                 android:text="@string/frontbutton" />
 
+            <Button
+                android:id="@+id/next2"
+                android:onClick="@{() -> countryFrontFragment.goToNextScreen2()}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:minWidth="@dimen/button_width"
+                android:text="@string/frontbutton2" />
+
         </LinearLayout>
     </ScrollView>
 </layout>

@@ -31,7 +31,7 @@ class CountryViewModel : ViewModel() {
             } catch (e: Exception) {
                 _status.value = CountryApiStatus.ERROR
                 _countries.value = listOf()
-                Log.i("Pesan Error :", "${e.message}")
+                Log.i("Pesan Error Country:", "${e.message}")
             }
         }
     }

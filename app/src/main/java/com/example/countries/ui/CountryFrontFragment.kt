@@ -33,6 +33,10 @@ class CountryFrontFragment : Fragment() {
         findNavController().navigate(R.id.action_countryFrontFragment_to_countryListFragment)
     }
 
+    fun goToNextScreen2() {
+        findNavController().navigate(R.id.action_countryFrontFragment_to_heritageListFragment)
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
