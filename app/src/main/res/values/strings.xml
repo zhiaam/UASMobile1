@@ -3,8 +3,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="greeting">Welcome,</string>
-    <string name="frontbutton">Country of The World</string>
-    <string name="frontbutton2">Several Tourist Spot</string>
+    <string name="frontbutton">Countries of The World</string>
+    <string name="frontbutton2">Their Tourist Spot</string>
     <string name="text1">Commonly known as: </string>
     <string name="text2">Country capital: </string>
     <string name="text3">Located in: </string>

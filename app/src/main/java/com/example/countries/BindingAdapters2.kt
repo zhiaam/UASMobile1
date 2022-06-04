@@ -2,16 +2,9 @@ package com.example.countries
 
 import android.view.View
 import android.widget.ImageView
-import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
-import com.example.countries.network.Country
-import com.example.countries.network.Fields
-import com.example.countries.network.Heritage
 import com.example.countries.network.Records
-import com.example.countries.ui.CountryApiStatus
-import com.example.countries.ui.CountryListAdapter
 import com.example.countries.ui.HeritageApiStatus
 import com.example.countries.ui.HeritageListAdapter
 

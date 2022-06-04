@@ -5,8 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.countries.network.Fields
-import com.example.countries.network.Heritage
 import com.example.countries.network.HeritageApi
 import com.example.countries.network.Records
 import kotlinx.coroutines.launch

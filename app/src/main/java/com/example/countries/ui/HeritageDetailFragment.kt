@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
-import com.example.countries.databinding.FragmentCountryDetailBinding
 import com.example.countries.databinding.FragmentHeritageDetailBinding
 
 

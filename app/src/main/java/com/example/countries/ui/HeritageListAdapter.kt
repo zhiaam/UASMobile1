@@ -6,8 +6,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.countries.databinding.ListViewItem2Binding
-import com.example.countries.network.Fields
-import com.example.countries.network.Heritage
 import com.example.countries.network.Records
 
 class HeritageListAdapter(val clickListener: HeritageListener) :
